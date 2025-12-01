@@ -1,0 +1,468 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    --main-color-1: #45abca;
+    --main-color-2: #19295f;
+    --hover-yellow: #ffe139;
+    width: 98.8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+
+header, div, nav, h1, h2 {
+    margin: 0;
+    box-sizing: border-box;
+}
+.header {
+    width: 100vw;
+}
+.products, .about {
+    max-width: 1200px;
+}
+/*--------HEADER---------*/
+.header {
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-image: linear-gradient(to right, var(--main-color-1), var(--main-color-2));
+    color: #fff;
+    align-items: center;
+    position: relative;
+    border: none;
+    border-bottom: 3px solid #a0c6ff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-container img{
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.logo-container h2 {
+    margin-left: 10px;
+    font-size: 16px;
+    display: inline-block;
+    align-items: center;
+}
+
+.logo-container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#checkbox {
+    display: none;
+}
+.header label {
+    margin-right: 20px;
+}
+
+.header-nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #3339;
+    height: 50vh;
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    right: 1px;
+    z-index: 2;
+    border: none;
+}
+
+.header-nav a {
+    color: #fff;
+    font-size: 18px;
+    background-color: #000d;
+    padding: 10px 20px;
+    border-radius: 100px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 25px;
+    transition: color font-size;
+    transition-duration: .2s;
+    
+}
+
+.header-nav a:active {
+    outline: 1px solid #fff;
+    color: var(--hover-yellow);
+    font-size: 20px;
+}
+.header span{
+    margin: 0 20px;
+    height: 25px;
+}
+
+
+#checkbox:checked ~ .header-nav {
+    display: flex;
+}
+
+#menu {
+    font-size: 30px;
+}
+
+/*--------MAIN----------*/
+
+.main-background {
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(to right, #0008, #0008), url(servimed.imgs/Quirofanos-HVQ-1-scaled.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-left: 20px;
+    color: #fff;
+}
+
+/*--------MAIN---------*/
+.main-text {
+    max-width: clamp(100vw, 500px, 80vw);
+    border-left: 6px solid #a0c6ff;
+    border-radius: 6px;
+    padding-left: 10px;
+    margin-top: 20px;
+    margin: 0 40px;
+}
+.main-text h2 {
+    font-family: 'Times New Roman';
+}
+
+.main-text p {
+    color: #ddd;
+}
+
+h1 {
+    font-size: clamp(30px, 70%, 5px);
+}
+
+.main-background a {
+    margin-top: 30px;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    background-image: linear-gradient(to right, var(--main-color-1), var(--main-color-2));
+    max-width: 140px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    border-radius: 100px;
+    border: 1px solid #fff7;
+    transition: color box-shadow font-size;
+    transition-duration: .2s;
+    text-align: center;
+    box-shadow: 0 0 5px #fff9ff;
+}
+
+.main-background a:hover {
+    box-shadow: 0 0 40px #fff;
+    font-size: 11px;
+    color: var(--hover-yellow);
+}
+
+.main-background span {
+    margin-left: 10px;
+}
+
+.about{
+    background-color: #eee;
+    justify-content: center;
+}
+.about-container {
+    background-color: #fff;
+    display: flex;
+    gap: 20px;
+    min-height: 350px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 0 20px #000;
+}
+.about h2 {
+    margin: 20px 15px;
+    padding-top: 20px;
+    font-size: 30px;
+    color: #0b2d61;
+}
+
+.about p {
+    margin: 20px;
+}
+.about-img {
+    display: none;
+    background-image: url(servimed.imgs/cirujano.jpg);
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.section-text{
+    max-width: 400px;
+    position: relative;
+    z-index: 20;
+}
+
+.product-text {
+    padding: 5px;
+    background-image: linear-gradient(to right, var(--main-color-1), var(--main-color-2));
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    color: #fff;
+}
+.product-name {
+    font-size: 20px;
+    color: #ddd;
+    margin: 0;
+}
+
+.price {
+    font-size: 20px;
+    color: #e3eeff;
+    margin-left: 4px;
+    margin: 0;
+}
+.products {
+    padding: 10px 20px;
+}
+.products-tittle {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #fafafa;
+}
+
+.product-img-container {
+    height: 150px;
+    overflow: hidden;
+}
+.container-product img {
+    transition-duration: .2s;
+    transition: transform filter;
+    transition-timing-function: ease;
+}
+.container-product:hover img {
+    transform: scale(1.1);
+    filter: brightness(.9);
+}
+.container-product h3 {
+    transition: color; 
+    transition-duration: .2s;
+    transition-timing-function: ease;
+}
+.container-product:hover h3 {
+    color: var(--hover-yellow)
+}
+.view-catalog {
+    background-image: linear-gradient(var(--main-color-1), var(--main-color-2));
+    padding: 8px 15px;
+    border: none;
+    border-radius: 50px;
+    color: #fff;text-decoration: none;
+    box-shadow: 0 0 10px #fffa;
+    width: 100px;
+    text-align: center;
+    transition: box-shadow color;
+    transition-duration: .2s;
+}
+.view-catalog:hover {
+    color: var(--hover-yellow);
+    box-shadow: 0 0 15px #fff;
+}
+.view-more-button {
+    transition: box-shadow color;
+    transition-duration: .2s;
+    background-image: linear-gradient(var(--main-color-1), var(--main-color-2));
+    padding: 8px 15px;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    box-shadow: 0 0 10px #fffa;
+    font-size: 16px;
+    width: 110px;
+    text-align: center;
+}
+.view-more-button:hover {
+    cursor: pointer;
+    color: var(--hover-yellow);
+    box-shadow: 0 0 15px #fff;
+}
+.container-product {
+    background-image: linear-gradient(to right, var(--main-color-1), var(--main-color-2));
+}
+.view-catalog-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    display: flex;
+    gap: 10px;
+}
+.products {
+    background-image: linear-gradient(#666, #ccc, #666);
+    padding-bottom: 20px;
+}
+/*SECCION DE PRODUCTOS PARA DISPOSITIVOS*/
+    @media screen and (max-width: 499px) {
+    .products {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .products-container {
+        display: grid;
+        place-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        width: 100%;
+        gap: 8px;
+    }
+    .container-product {
+        width: 100%;
+        background-color: #555;
+        border-radius: 12px;
+        cursor: pointer;
+        box-shadow: 0 0 20px #000;
+    }
+    .product-img-container {
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .product-img-container img {
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+
+
+/*--------MEDIA PARA MONITORES---------*/
+
+@media screen and (min-width: 500px) {
+    .header-nav {
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        top: 0;
+        position: static;
+        height: auto;
+        max-width: 400px;
+        margin-right: 40px;
+    }
+    .header-nav a {
+        border-radius: 0;
+        padding: 10px 10px;
+        margin: 0;
+        background-color: transparent;
+        width: auto;
+        height: 100%;
+        transition: background-color color font-size;
+        transition-duration: .2s;
+    }
+    .header span {
+        margin: 0 5px;
+    }
+    .header-nav a:hover {
+        color: var(--hover-yellow);
+        background-image: linear-gradient(#000c, #0003);
+        border-radius: 100px;
+        font-size: 20px;
+        border: none;
+    }
+    .header label {
+        display: none;
+    }
+    .main-background {
+        align-items: center;
+        height: 400px;
+    }
+    .main-text {
+        min-width: 400px;
+        width: 600px;
+        margin-top: 50px;
+    }
+    .main-background a {
+        margin-top: 120px;
+    }
+    .about-img {
+        display: block;
+    }
+    .section-text {
+        margin-left: 10px;
+        max-width: 400px;
+    }
+    .about {
+        padding: 30px;
+    }
+    .about-container {border-radius: 12px;}
+    /* SECCION DE PRODUCTOS */
+    .products {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 0;
+    }
+    .products-tittle {
+        font-size: 30px;
+    }
+    .products:first-child {
+        font-size: 60px;
+    }
+    .products-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        place-content: center;
+        padding: 20px 40px;
+        gap: 20px;
+        width: 100%;
+        max-width: 750px;
+    }
+    .container-product {
+        background-image: linear-gradient(to right, var(--main-color-1), var(--main-color-2));
+        border-radius: 12px;
+        box-shadow: 0 0 20px #000;
+    }
+    .container-product:hover {
+        cursor: pointer;
+    }
+    .product-img-container{
+        width: 100%;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    .product-img-container img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    
+}
